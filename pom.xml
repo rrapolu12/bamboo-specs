@@ -1,0 +1,72 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+<!--  <parent>
+    <groupId>com.atlassian.bamboo</groupId>
+    <artifactId>bamboo-specs-parent</artifactId>
+    <version>7.1.w3</version>
+    <relativePath/>
+  </parent>-->
+
+
+ <!-- <parent>
+    <groupId>com.atlassian.bamboo</groupId>
+    <artifactId>bamboo-specs-parent</artifactId>
+    <version>6.2.1</version>
+    <relativePath/>
+  </parent>-->
+
+  <groupId>com.atlassian.bamboo</groupId>
+  <artifactId>bamboo-specs</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>8</source>
+          <target>8</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <packaging>jar</packaging>
+
+  <dependencies>
+
+
+    <!-- https://mvnrepository.com/artifact/com.atlassian.bamboo/bamboo-specs-parent -->
+    <dependency>
+      <groupId>com.atlassian.bamboo</groupId>
+      <artifactId>bamboo-specs-parent</artifactId>
+      <version>7.1.3</version>
+      <type>pom</type>
+    </dependency>
+
+    <dependency>
+      <groupId>com.atlassian.bamboo</groupId>
+      <artifactId>bamboo-specs-api</artifactId>
+      <version>7.1.3</version>
+    </dependency>
+    <dependency>
+      <groupId>com.atlassian.bamboo</groupId>
+      <artifactId>bamboo-specs</artifactId>
+      <version>7.1.3</version>
+    </dependency>
+
+    <!-- Test dependencies -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+         
+  <!-- run 'mvn test' to perform offline validation of the plan -->
+  <!-- run 'mvn -Ppublish-specs' to upload the plan to your Bamboo server -->
+</project>
